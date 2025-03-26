@@ -2,6 +2,7 @@
 import React from 'react';
 import Logo from '@/components/Logo';
 import MainTimer from '@/components/MainTimer';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const Index = () => {
   return (
@@ -9,19 +10,14 @@ const Index = () => {
       <header className="w-full py-6 px-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <Logo />
-          <div className="text-xs text-muted-foreground">
-            Mantenha seu foco
-          </div>
+          <ThemeToggle />
         </div>
       </header>
       
       <main className="flex-1 w-full flex flex-col items-center justify-center py-10">
-        <h1 className="text-3xl font-light text-center mb-2 animate-fade-in">
-          Controle seu tempo
+        <h1 className="font-mono text-2xl md:text-3xl font-light text-center mb-10 animate-fade-in tracking-wide">
+          time to focus
         </h1>
-        <p className="text-muted-foreground text-center max-w-md mb-10 animate-fade-in">
-          Acompanhe suas horas, minutos e segundos de foco em trabalho, estudo ou atividades pessoais.
-        </p>
         
         <MainTimer />
       </main>

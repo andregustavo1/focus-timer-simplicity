@@ -20,8 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['-apple-system', 'BlinkMacSystemFont', 'San Francisco', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'sans-serif'],
-				mono: ['Roboto Mono', 'SF Mono', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+				sans: ['Roboto Mono', 'monospace'],
+				mono: ['Roboto Mono', 'monospace'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

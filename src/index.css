@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -123,11 +122,13 @@
 @layer base {
   * {
     @apply border-border;
+    font-family: 'Roboto Mono', monospace;
   }
 
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+    font-family: 'Roboto Mono', monospace;
   }
 }
 

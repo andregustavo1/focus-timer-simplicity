@@ -25,7 +25,7 @@ const TimerControls: React.FC<TimerControlsProps> = ({
         <Button 
           onClick={onStart} 
           size="lg" 
-          className="rounded-full w-16 h-16 text-primary-foreground bg-primary/80 backdrop-blur-sm hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 animate-scale-in"
+          className="rounded-full w-16 h-16 text-primary-foreground backdrop-blur-sm hover:bg-primary/110 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 animate-scale-in"
           aria-label="Start timer"
         >
           <Play size={24} className="ml-1" />
@@ -34,7 +34,6 @@ const TimerControls: React.FC<TimerControlsProps> = ({
         <Button 
           onClick={onPause} 
           size="lg" 
-          variant="destructive" 
           className="rounded-full w-16 h-16 backdrop-blur-sm transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 animate-scale-in"
           aria-label="Pause timer"
         >

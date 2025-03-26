@@ -6,7 +6,7 @@ import ThemeToggle from '@/components/ThemeToggle';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center bg-gradient-to-b from-background to-secondary/20">
+    <div className="min-h-screen flex flex-col items-center bg-[--primary-bg]">
       <header className="w-full py-6 px-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <Logo />
@@ -25,7 +25,7 @@ const Index = () => {
       <footer className="w-full py-6 px-4 mt-auto">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-xs text-muted-foreground">
-            Mínimo Focus Timer &copy; {new Date().getFullYear()}
+            Minimal Focus Timer &copy; {new Date().getFullYear()}
           </p>
         </div>
       </footer>

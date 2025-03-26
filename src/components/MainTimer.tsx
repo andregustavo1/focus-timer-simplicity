@@ -123,7 +123,7 @@ const MainTimer: React.FC<MainTimerProps> = ({ className }) => {
     <div className={cn("flex flex-col items-center justify-center w-full max-w-4xl mx-auto px-4", className)}>
       <div className="w-full space-y-12">
         {/* Timer Display */}
-        <div className="glass rounded-2xl p-8 mb-8 shadow-lg animate-fade-in">
+        <div className="rounded-2xl py-20 mb-8 shadow-lg animate-fade-in bg-[--secondary-bg]">
           <TimerDisplay 
             hours={hours} 
             minutes={minutes} 

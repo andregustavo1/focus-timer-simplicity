@@ -5,7 +5,7 @@ import TimerDisplay from '@/components/TimerDisplay';
 import TimerControls from '@/components/TimerControls';
 import TaskCategory, { TaskType } from '@/components/TaskCategory';
 import SessionHistory, { Session } from '@/components/SessionHistory';
-import { toast } from '@/components/ui/sonner';
+import { toast } from 'sonner';
 
 interface MainTimerProps {
   className?: string;

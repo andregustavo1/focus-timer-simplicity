@@ -2,10 +2,13 @@
 import { useState, useEffect, createContext, useContext } from 'react';
 
 type Theme = 'light' | 'dark';
+type PrimaryColor = 'red' | 'orange' | 'yellow' | 'green' | 'blue' | 'purple';
 
 type ThemeContextType = {
   theme: Theme;
   setTheme: (theme: Theme) => void;
+  primaryColor: PrimaryColor;
+  setPrimaryColor: (color: PrimaryColor) => void;
 };
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -21,6 +24,11 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     return savedTheme;
   });
 
+  const [primaryColor, setPrimaryColor] = useState<PrimaryColor>(() => {
+    const savedColor = localStorage.getItem('primaryColor') as PrimaryColor;
+    return savedColor || 'orange';
+  });
+
   useEffect(() => {
     // Salva o tema no localStorage sempre que ele mudar
     localStorage.setItem('theme', theme);
@@ -33,8 +41,22 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
   }, [theme]);
 
+  useEffect(() => {
+    // Salva a cor primária no localStorage
+    localStorage.setItem('primaryColor', primaryColor);
+    
+    // Remove todas as classes de cor primária
+    document.documentElement.classList.remove(
+      'theme-red', 'theme-orange', 'theme-yellow', 
+      'theme-green', 'theme-blue', 'theme-purple'
+    );
+    
+    // Adiciona a classe para a cor selecionada
+    document.documentElement.classList.add(`theme-${primaryColor}`);
+  }, [primaryColor]);
+
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
+    <ThemeContext.Provider value={{ theme, setTheme, primaryColor, setPrimaryColor }}>
       {children}
     </ThemeContext.Provider>
   );

@@ -13,12 +13,12 @@ const THEME_OPTIONS = [
 ];
 
 const COLOR_OPTIONS = [
-  { value: 'red', label: 'Vermelho', class: 'bg-red-500' },
-  { value: 'orange', label: 'Laranja', class: 'bg-orange-500' },
-  { value: 'yellow', label: 'Amarelo', class: 'bg-yellow-500' },
-  { value: 'green', label: 'Verde', class: 'bg-green-500' },
-  { value: 'blue', label: 'Azul', class: 'bg-blue-500' },
-  { value: 'purple', label: 'Roxo', class: 'bg-purple-500' },
+  { value: 'red' as const, label: 'Vermelho', class: 'bg-red-500' },
+  { value: 'orange' as const, label: 'Laranja', class: 'bg-orange-500' },
+  { value: 'yellow' as const, label: 'Amarelo', class: 'bg-yellow-500' },
+  { value: 'green' as const, label: 'Verde', class: 'bg-green-500' },
+  { value: 'blue' as const, label: 'Azul', class: 'bg-blue-500' },
+  { value: 'purple' as const, label: 'Roxo', class: 'bg-purple-500' },
 ];
 
 const AppearancePanel = () => {
